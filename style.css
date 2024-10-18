@@ -1,0 +1,484 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e0e0e0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 15px 30px;
+  position: relative;
+  width: 100%;
+}
+
+/* Logo */
+.icon {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Space between links */
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  color: #f0a500;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none; /* Hidden on desktop */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: #333;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none; /* Hidden by default */
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  .navbar.active .nav-links {
+    display: flex; /* Show when active */
+  }
+
+  /* Show the hamburger menu on mobile */
+  .menu-toggle {
+    display: flex;
+  }
+}
+
+/* Split layout container */
+.split-layout {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 60px); /* Adjust for navbar height */
+}
+
+/* Left section: for profile picture */
+.left-section {
+  flex: 1;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-right: 2px solid #ddd;
+}
+
+.profile-pic {
+  width: 90%;
+  height: auto;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Right section: for text and DCU logo */
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #fff;
+}
+
+.text-content {
+  text-align: center;
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 4em; /* Increased size for better prominence */
+  color: #0077cc;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 2em; /* Slightly larger for visibility */
+  color: #333;
+  line-height: 1.4;
+  margin: 10px 0;
+  font-weight: normal;
+}
+
+/* DCU Logo positioning */
+.logo {
+  width: 120px;
+  height: auto;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  opacity: 0.8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+
+  .split-layout {
+      flex-direction: column;
+  }
+
+  .left-section, .right-section {
+      width: 100%;
+      height: 50%;
+      border-right: none;
+      border-bottom: 2px solid #ddd;
+  }
+
+  .text-content {
+      padding: 20px;
+  }
+
+  h1 {
+      font-size: 2.5em; /* Adjusted for mobile */
+  }
+
+  h2 {
+      font-size: 1.5em; /* Adjusted for mobile */
+  }
+
+  .logo {
+      bottom: 10px;
+      right: 10px;
+      width: 80px;
+  }
+}
+
+/* Dropdown CSS for programming languages (added styles) */
+
+/* Styling specific to dropdown titles */
+.dropdown-title {
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-title:hover {
+  background-color: #555;
+}
+
+/* Style for the dropdown content (hidden by default) */
+.dropdown-content {
+  list-style-type: disc;
+  margin: 10px 20px;
+  padding: 10px;
+  display: none; /* Hide initially */
+  border-left: 3px solid #333;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Transition effect for the dropdown */
+.dropdown-content.show {
+  display: block;
+  animation: dropdown 0.4s ease-in-out;
+}
+
+@keyframes dropdown {
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 500px;
+    opacity: 1;
+  }
+}
+
+/* Styling the list items inside the dropdown */
+.dropdown-content li {
+  margin: 8px 0;
+  color: #555;
+}
+/* Preview container: Flexbox layout with 70% image and 30% text */
+.preview-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Left column: Image taking up 70% width */
+.left-content {
+  flex: 7;
+  text-align: left;
+}
+
+.left-content img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effect */
+}
+
+/* Add hover effect for the image */
+.left-content a:hover img {
+  transform: scale(1.05); /* Slight zoom-in on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Right column: Text taking up 30% width */
+.right-content {
+  flex: 3;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-content strong {
+  font-size: 1.4em;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.right-content p {
+  color: #555;
+  margin-top: 10px;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .preview-container {
+      flex-direction: row; /* Two-column layout on larger screens */
+  }
+
+  .left-content {
+      flex: 7; /* 70% width */
+  }
+
+  .right-content {
+      flex: 3; /* 30% width */
+      padding-left: 30px;
+  }
+
+  .right-content p {
+      font-size: 1.1em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .right-content {
+      padding-left: 40px;
+  }
+
+  .left-content img {
+      max-width: 90%; /* Slightly reduce image size on very large screens */
+  }
+}
+/* Container for the entire carousel */
+.carousel-container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden; /* Hide non-visible slides */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual slide - hidden by default */
+.carousel-slide {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Show the first slide by default */
+.carousel-slide.active {
+  display: block;
+}
+
+/* Step title styling */
+.step-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Image styling */
+.carousel-slide img.thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Description styling */
+.image-description {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Arrows for navigation */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.carousel-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Left arrow positioning */
+.left-arrow {
+  left: 10px;
+}
+
+/* Right arrow positioning */
+.right-arrow {
+  right: 10px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    width: 100%;
+  }
+}
+.docker-section {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+.docker-section .thumbnail {
+  width: 640x;
+  height: auto;
+  margin-right: 20px;
+}
+
+.docker-section h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.docker-section h4 {
+  margin: 5px 0 0 0;
+  font-size: 1.1em;
+  color: #666;
+  line-height: 1.5;
+}
+.git-section {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.git-section img {
+    display: block;
+    margin: 0 auto 15px;
+    width: 100px;
+    height: auto;
+}
+
+.git-section a {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-bottom: 15px;
+}
+
+.git-section a:hover {
+    background-color: #0056b3;
+}
+
+.git-section h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.git-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.git-section li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #555;
+}

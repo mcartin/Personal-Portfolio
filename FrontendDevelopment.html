@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+<title>Front-end Development</title>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="icon">Cara Martin</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="ProgrammingLanguages.html">Programming Languages</a></li>
+    <li><a href="FrontendDevelopment.html">Front-end Development</a></li>
+    <li><a href="DevOps.html">DevOps</a></li>
+    <li><a href="Databases.html">Databases</a></li>
+  </ul>
+  <!-- Hamburger Menu (for mobile view) -->
+  <div class="menu-toggle">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+</nav>
+  
+</head>
+<body>
+    <h1>Front-end Development</h1>
+    <h2 class="dropdown-title">HTML & CSS</h2>
+    <ul class="dropdown-content">
+      <li>
+        <div class="preview-container">
+          <!-- Left column: Image wrapped in link -->
+          <div class="left-content">
+            <a class="website-link" href="https://mcartin.github.io/Personal-Website/" target="_blank">
+              <img class="thumbnail" src="images/personal website.png" alt="My Personal Website Preview">
+            </a>
+          </div>
+          
+          <!-- Right column: Text -->
+          <div class="right-content">
+            <strong>Web Design</strong>
+            <p>My first HTML and CSS project which was to created a personal website about myself, where I am from, hobbies, interest, work experience. It’s a simple yet effective demonstration of basic web design principles.</p>
+          </div>
+        </div>
+      </li>
+    
+      <li>
+        <div class="preview-container">
+          <!-- Left column: Image wrapped in link -->
+          <div class="left-content">
+            <a class="website-link" href="https://mcartin.github.io/Decluttered-Website/" target="_blank">
+              <img class="thumbnail" src="images/Decluttered Website.png" alt="Decluttered Website Preview">
+            </a>
+          </div>
+    
+          <!-- Right column: Text -->
+          <div class="right-content">
+            <strong>Digital Innovation</strong>
+            <p>This project involved creating a website and promotional materials for our Innovation app "Decluttered," aimed at helping users manage their wardrobes efficiently.</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+    
+    <h2 class="dropdown-title">Django</h2>
+    <ul class="dropdown-content">
+    <div class="carousel-container">
+      <!-- Left arrow -->
+      <button class="carousel-arrow left-arrow" onclick="prevSlide()">&#10094;</button>
+    
+      <!-- Step and image content -->
+      <div class="carousel-slide">
+        <h3 class="step-title">Step 1: Pre Login</h3>
+        <img class="thumbnail" src="images/Pizzaeria.png" alt="Django Pizzeria Home">
+        <p class="image-description">This page is to ensure all users login and their is none of the features available pre login.</p>
+      </div>
+    
+      <div class="carousel-slide">
+        <h3 class="step-title">Step 2: Signup Form</h3>
+        <img class="thumbnail" src="images/pizzeria signup.png" alt="Django Pizzeria Signup">
+        <p class="image-description">The signup form allows new users to create an account, storing their details in the user database.</p>
+      </div>
+    
+      <div class="carousel-slide">
+        <h3 class="step-title">Step 3: Login Page</h3>
+        <img class="thumbnail" src="images/pizzeria login.png" alt="Django Pizzeria Login">
+        <p class="image-description">The login page where users can access their account and start a session.</p>
+      </div>
+
+      <div class="carousel-slide">
+        <h3 class="step-title">Step 4: Home Page</h3>
+        <img class="thumbnail" src="images/pizzeria homepage.png" alt="Django Pizzeria homepage">
+        <p class="image-description">Once successfully logged, all users are presented with this homepage that showcases all teh features available.</p>
+      </div>
+    
+      <div class="carousel-slide">
+        <h3 class="step-title">Step 5: Previous Orders</h3>
+        <img class="thumbnail" src="images/pizzeria previous orders.png" alt="Django Pizzeria Previous Orders">
+        <p class="image-description">This displays all the previous orders created by this user in the past, which are sotred in the database.</p>
+      </div>
+
+      <div class="carousel-slide">
+        <h3 class="step-title">Step 6: New Order</h3>
+        <img class="thumbnail" src="images/pizzeria new order.png" alt="Django Pizzeria New Orders">
+        <p class="image-description">The user is presented with the option of creating their new order, with drop down menus of all the available options.</p>
+      </div>
+
+      <div class="carousel-slide">
+        <h3 class="step-title">Step 7: Confirmation</h3>
+        <img class="thumbnail" src="images/pizzeria confirmation.png" alt="Django Pizzeria Confirmation">
+        <p class="image-description">Finally the user receives user feedback with the confirmation message that their order was created.</p>
+      </div>
+       
+      <!-- Right arrow -->
+      <button class="carousel-arrow right-arrow" onclick="nextSlide()">&#10095;</button>
+    </div>
+ </ul>
+    
+    <h2 class="dropdown-title">React</h2>
+    <ul class="dropdown-content">
+        <div class="carousel-container">
+            <!-- Left arrow -->
+            <button class="carousel-arrow left-arrow" onclick="prevSlideReact()">&#10094;</button>
+            
+            <!-- Step and image content -->
+            <div class="carousel-slide" id="react-slide-1">
+                <h3 class="step-title">Step 1: HomePage</h3>
+                <img class="thumbnail" src="images/University Homepage.png" alt="React University Homepage">
+                <p class="image-description">The homepage to the University containing all the features available</p>
+            </div>
+            
+            <div class="carousel-slide" id="react-slide-2">
+                <h3 class="step-title">Step 2: All Degrees</h3>
+                <img class="thumbnail" src="images/all degrees.png" alt="React University All Degrees">
+                <p class="image-description">Displays all the degrees that are linked in the university api with the option to view the degree code</p>
+            </div>
+            
+            <div class="carousel-slide" id="react-slide-3">
+                <h3 class="step-title">Step 3: Create a Degree</h3>
+                <img class="thumbnail" src="images/new degree.png" alt="React University New Degree">
+                <p class="image-description">Give the option to create a new degree adding to the rest which can then be viewed in the all degrees as seen in page previous after completed.</p>
+            </div>
+            <div class="carousel-slide" id="react-slide-4">
+              <h3 class="step-title">Step 4: All Cohorts</h3>
+              <img class="thumbnail" src="images/all cohorts.png" alt="React University All Cohorts">
+              <p class="image-description">Displays all the cohorts that are available within the university api</p>
+            </div>
+            <div class="carousel-slide" id="react-slide-5">
+              <h3 class="step-title">Step 5: New Cohort</h3>
+              <img class="thumbnail" src="images/new cohort.png" alt="React University New Cohorts">
+              <p class="image-description">Allows you to create a new cohort, adding it to all the other cohorts in response.</p>
+            </div>
+            <div class="carousel-slide" id="react-slide-6">
+              <h3 class="step-title">Step 6: New Module</h3>
+              <img class="thumbnail" src="images/new module.png" alt="React University New Module">
+              <p class="image-description">Allows you to create a new Module, adding it to all the other Modules in response.</p>
+            </div>
+            <div class="carousel-slide" id="react-slide-7">
+              <h3 class="step-title">Step 7: All Modules</h3>
+              <img class="thumbnail" src="images/all modules.png" alt="React University All Modules">
+              <p class="image-description">Displays all the modules that are available within the university api including any which you may have created</p>
+            </div>
+            <div class="carousel-slide" id="react-slide-8">
+              <h3 class="step-title">Step 8: View a Module</h3>
+              <img class="thumbnail" src="images/view module.png" alt="React University View a Module">
+              <p class="image-description">Allows you to see more information in relation to a each module, the module code and title, continuous assesment breakdown and the cohorts associated with this module. </p>
+            </div>
+            <!-- Right arrow -->
+            <button class="carousel-arrow right-arrow" onclick="nextSlideReact()">&#10095;</button>
+        </div>
+    </ul>
+    
+    
+    <img src="images/dcu logo.png" alt="DCU Logo" class="logo">
+<script src="script.js"></script>
+</body>
+</html>
