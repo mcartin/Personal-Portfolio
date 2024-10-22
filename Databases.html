@@ -1,125 +1,133 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-<title>Databases</title>
-<style>body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4; /* Light background for contrast */
-}
+    <title>Databases</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light background for contrast */
+        }
 
-.dropdown-content {
-  display: flex;
-  align-items: flex-start;
-  padding: 30px;
-  margin: 20px auto; /* Center the content */
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 1200px; /* Limit max width for better readability */
-  width: 90%; /* Responsive width */
-}
+        .dropdown-content {
+            display: flex;
+            align-items: flex-start;
+            padding: 30px;
+            margin: 20px auto; /* Center the content */
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 1200px; /* Limit max width for better readability */
+            width: 90%; /* Responsive width */
+        }
 
-.image-container {
-  margin-right: 20px;
-}
+        .image-container {
+            margin-right: 20px;
+        }
 
-.umlimage {
-  width: 100%; /* Responsive image */
-  max-width: 600px; /* Maximum width */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 5px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
+        .umlimage {
+            width: 100%; /* Responsive image */
+            max-width: 600px; /* Maximum width */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
 
-.uml.text {
-  flex: 1;
-}
+        .uml-text {
+            flex: 1;
+        }
 
-strong {
-  font-size: 1.8em; /* Larger font size for emphasis */
-  color: #333;
-  display: block;
-  margin-bottom: 15px;
-}
+        strong {
+            font-size: 1.8em; /* Larger font size for emphasis */
+            color: #333;
+            display: block;
+            margin-bottom: 15px;
+        }
 
-ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
 
-ul li {
-  margin: 8px 0; /* More spacing between list items */
-  font-size: 1.1em; /* Slightly larger font size */
-  line-height: 1.5; /* Line height for readability */
-  color: #555;
-}
-</style>
-<!-- Navbar -->
-<nav class="navbar">
-  <div class="icon">Cara Martin</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="ProgrammingLanguages.html">Programming Languages</a></li>
-    <li><a href="FrontendDevelopment.html">Front-end Development</a></li>
-    <li><a href="DevOps.html">DevOps</a></li>
-    <li><a href="Databases.html">Databases</a></li>
-  </ul>
-  <!-- Hamburger Menu (for mobile view) -->
-  <div class="menu-toggle">
-    <span class="bar"></span>
-    <span class="bar"></span>
-    <span class="bar"></span>
-  </div>
-</nav>
-  
+        ul li {
+            margin: 8px 0; /* More spacing between list items */
+            font-size: 1.1em; /* Slightly larger font size */
+            line-height: 1.5; /* Line height for readability */
+            color: #555;
+        }
+    </style>
 </head>
 <body>
-    <h1>DataBases</h1>
-    <h2 class="dropdown-title">SQL</h2>
-    <ul class="dropdown-content">
-      <div class="preview-container">
-        <div class="left-content">
-          <img class="thumbnail" src="images/sql.png" alt="SQL Logo">
-        </div>
-        
-        <div class="right-content">
-          <strong>Key SQL Skills</strong><br>
-          <p>
-            - Table Creation<br>
-            - Data Types: Such as INT, VARCHAR, FLOAT for data storage.<br>
-            - Keys: Established primary and foreign keys for data integrity.<br>
-            - Data Insertion: Populated tables such as using INSERT statements.<br>
-            - Normalization: Organized data to reduce redundancy.<br>
-          </p>
-        </div>
-      </div>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="icon">Cara Martin</div>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ProgrammingLanguages.html">Programming Languages</a></li>
+        <li><a href="FrontendDevelopment.html">Front-end Development</a></li>
+        <li><a href="DevOps.html">DevOps</a></li>
+        <li><a href="Databases.html">Databases</a></li>
     </ul>
-    
-      
-    
-    <h2 class="dropdown-title">UML</h2>
-    <div class="dropdown-content">
-        <div class="image-container">
-            <img class="umlimage" src="images/uml.png" alt="UML Logo" style="height: auto; width: 600px;">
-            <p>From Current Object Oriented Programming Project In Progress</p>
+    <!-- Hamburger Menu (for mobile view) -->
+    <div class="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</nav>
+
+<h1>Databases</h1>
+
+<!-- SQL Section -->
+<h2 class="dropdown-title">SQL</h2>
+<div class="dropdown-content">
+    <div class="preview-container">
+        <div class="left-content">
+            <img class="thumbnail" src="images/sql.png" alt="SQL Logo">
         </div>
-        <div class="uml text">
-            <strong>Key UML Concepts and Skills</strong>
-            <ul>
-                <li>UML Diagrams: Class, Use Case, Sequence, Activity, and State Diagrams.</li>
-                <li>Modeling Elements: classes, actors, associations, generalization, and multiplicity.</li>
-                <li>Documentation and Communication: Use UML to document system architecture and facilitate communication.</li>
-                <li>Software Tools: Experience with tools like Lucidchart, StarUML, and Visual Paradigm.</li>
-                <li>Best Practices: Learn to create clear, concise diagrams and use consistent notation.</li>
-            </ul>
+        <div class="right-content">
+            <strong>Key SQL Skills</strong>
+            <p>
+                - Table Creation<br>
+                - Data Types: Such as INT, VARCHAR, FLOAT for data storage.<br>
+                - Keys: Established primary and foreign keys for data integrity.<br>
+                - Data Insertion: Populated tables using INSERT statements.<br>
+                - Normalization: Organized data to reduce redundancy.<br>
+            </p>
         </div>
     </div>
-<div>
-  <img src="images/dcu logo.png" alt="DCU Logo" class="logo">
 </div>
-    <script src="script.js"></script>
+
+<!-- UML Section -->
+<h2 class="dropdown-title">UML</h2>
+<div class="dropdown-content">
+    <div class="image-container">
+        <img class="umlimage" src="images/uml.png" alt="UML Diagram">
+        <p>From Current Object Oriented Programming Project In Progress</p>
+    </div>
+    <div class="uml-text">
+        <strong>Key UML Concepts and Skills</strong>
+        <ul>
+            <li>UML Diagrams: Class, Use Case, Sequence, Activity, and State Diagrams.</li>
+            <li>Modeling Elements: Classes, actors, associations, generalization, and multiplicity.</li>
+            <li>Documentation and Communication: Use UML to document system architecture and facilitate communication.</li>
+            <li>Software Tools: Experience with tools like Lucidchart, StarUML, and Visual Paradigm.</li>
+            <li>Best Practices: Creating clear, concise diagrams and using consistent notation.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- DCU Logo -->
+<div>
+    <img src="images/dcu logo.png" alt="DCU Logo" class="logo">
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>

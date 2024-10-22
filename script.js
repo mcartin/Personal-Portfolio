@@ -1,14 +1,8 @@
 // script.js
-const menuToggle = document.querySelector('.menu-toggle');
-const navbar = document.querySelector('.navbar');
-
-menuToggle.addEventListener('click', () => {
-  navbar.classList.toggle('active');
-});
-
+// Ensure the DOM is fully loaded before executing
 document.addEventListener("DOMContentLoaded", function() {
   var headers = document.querySelectorAll(".dropdown-title");
-  
+
   headers.forEach(function(header) {
       header.addEventListener("click", function() {
           var nextUl = this.nextElementSibling;
@@ -25,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
 });
+
 let currentSlide = 0;
 const slides = document.querySelectorAll('.carousel-slide');
 
@@ -79,3 +74,5 @@ function prevSlideReact() {
 
 // Show the first slide initially
 showReactSlide(currentSlideReact);
+
+
